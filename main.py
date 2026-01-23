@@ -2,7 +2,18 @@ import sys
 import Backend as bk
 
 from Home import HomeGrid
-from pages.Hash import HashUtil
+from pages.CaseConverter import CaseUtil
+from pages.Colors import ColorUtil
+from pages.Converter import ConverterUtil
+from pages.DateTime import DateTimeUtil
+from pages.Diff import DiffUtil
+from pages.Encryption import EncryptionUtil
+from pages.JWT import JWTUtil
+from pages.Lorem import LoremUtil
+from pages.Markdown import MarkdownUtil
+from pages.Password import PasswordUtil
+from pages.Prettifier import PrettifyUtil
+from pages.QR import QRUtil
 
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QStackedWidget, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QFrame, QScrollArea, QPushButton
@@ -17,18 +28,13 @@ class MainWindow(QMainWindow):
         self.resize(700, 500)
 
         # Stylesheet
-        with open(bk.ResourcePath('Styles/global.css'), "r") as f:
-            stylesheet = f.read()
-        with open(bk.ResourcePath('Styles/main.css'), "r") as f:
-            stylesheet += f.read()
-        self.setStyleSheet(stylesheet)
+        self.setStyleSheet(bk.LoadStylesheet('main'))
 
         # Setup
         self.CentralWidget = QWidget()
         self.setCentralWidget(self.CentralWidget)
         self.MainLayout = QHBoxLayout(self.CentralWidget)
         self.MainLayout.setContentsMargins(0, 0, 0, 0)
-        self.MainLayout.setSpacing(0)
 
         self.SetupSidebar()
         self.SetupStack()
@@ -42,10 +48,10 @@ class MainWindow(QMainWindow):
         SidebarLayout.setSpacing(0)
 
         # Sidebar Title
-        title = QLabel("DEVFORGE")
+        title = QLabel("DevForge")
         title.setObjectName("SidebarTitle")
         title.setFixedHeight(70)
-        title.setAlignment(Qt.AlignmentFlag.AlignVCenter | Qt.AlignmentFlag.AlignLeft)
+        title.setAlignment(Qt.AlignmentFlag.AlignVCenter)
         SidebarLayout.addWidget(title)
 
         # Scroll area
@@ -71,6 +77,7 @@ class MainWindow(QMainWindow):
         line = QFrame()
         line.setFrameShape(QFrame.Shape.HLine)
         line.setObjectName("SidebarSeparator")
+        line.setFixedHeight(15)
         self.ScrollLayout.addWidget(line)
 
         # Nav buttons
@@ -93,8 +100,19 @@ class MainWindow(QMainWindow):
         self.stack.addWidget(self.home)
         
         # Stack tools
-        self.HashUtil = HashUtil(HomeCallback = lambda: self.SwitchTool(""))
-        self.stack.addWidget(self.HashUtil)
+        GoHome = lambda: self.SwitchTool("")
+        self.stack.addWidget(CaseUtil(HomeCallback = GoHome))
+        self.stack.addWidget(PrettifyUtil(HomeCallback = GoHome))
+        self.stack.addWidget(EncryptionUtil(HomeCallback = GoHome))
+        self.stack.addWidget(JWTUtil(HomeCallback = GoHome))
+        self.stack.addWidget(DateTimeUtil(HomeCallback = GoHome))
+        self.stack.addWidget(ColorUtil(HomeCallback = GoHome))
+        self.stack.addWidget(PasswordUtil(HomeCallback = GoHome))
+        self.stack.addWidget(QRUtil(HomeCallback = GoHome))
+        self.stack.addWidget(MarkdownUtil(HomeCallback = GoHome))
+        self.stack.addWidget(DiffUtil(HomeCallback = GoHome))
+        self.stack.addWidget(LoremUtil(HomeCallback = GoHome))
+        self.stack.addWidget(ConverterUtil(HomeCallback = GoHome))
 
     def CreateNavBtn(self, text, icon):
         btn = QPushButton(f"  {text}")
@@ -113,10 +131,12 @@ class MainWindow(QMainWindow):
             index = bk.tools.index(name) + 1
             self.stack.setCurrentIndex(index)
         except (ValueError, IndexError):
-            self.stack.setCurrentIndex(0) # Fallback to home
+            self.stack.setCurrentIndex(0)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    app.setApplicationName("DevForge")
+    app.setOrganizationName("DevForgeTools")
     app.setDesktopFileName("DevForge")
     #app.setWindowIcon(QIcon(bk.ResourcePath('logo.ico')))
     app.setStyle("Fusion")

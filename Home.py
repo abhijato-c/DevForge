@@ -12,11 +12,7 @@ class HomeGrid(QScrollArea):
         super().__init__()
 
         # Stylesheet
-        with open(bk.ResourcePath('Styles/global.css'), "r") as f:
-            stylesheet = f.read()
-        with open(bk.ResourcePath('Styles/Home.css'), "r") as f:
-            stylesheet += f.read()
-        self.setStyleSheet(stylesheet)
+        self.setStyleSheet(bk.LoadStylesheet('Home'))
 
         # Scroll Area
         self.setWidgetResizable(True)
@@ -75,7 +71,7 @@ class HomeGrid(QScrollArea):
             image = QLabel()
             image.setObjectName("ToolSelectorIcon")
             image.setScaledContents(True)
-            image.setPixmap(QPixmap(bk.ResourcePath(f"Static/{name} Image.png")))
+            image.setPixmap(QPixmap(bk.ResourcePath(f"Static/{name} Icon.png")))
             BtnLayout.addWidget(image, alignment=Qt.AlignmentFlag.AlignHCenter)
 
             BtnLayout.addStretch(3)
