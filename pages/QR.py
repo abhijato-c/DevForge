@@ -2,7 +2,7 @@ import Backend as bk
 from PyQt6.QtWidgets import QApplication, QMainWindow, QStackedWidget, QVBoxLayout, QWidget, QPushButton
 
 class QRUtil(QWidget):
-    def __init__(self, HomeCallback):
+    def __init__(self,):
         super().__init__()
 
         # Stylesheet

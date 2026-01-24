@@ -17,3 +17,11 @@ QScrollBar::handle:vertical {
 
 QScrollBar::handle:vertical:hover {background-color: #475569;}
 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {height: 0px;} /* Hide up down arrows */
+
+/* Header for tool pages */
+#ToolTitle {
+    color: hsl(230, 40%, 100%);
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

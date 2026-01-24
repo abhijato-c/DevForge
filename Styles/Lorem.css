@@ -1,0 +1,40 @@
+#ControlLabel {
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Word count textbox */
+#LoremSpinBox {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    color: #f1f5f9;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Generate btn */
+#ActionBtn {
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+#ActionBtn:hover { background-color: #7dd3fc; }
+#ActionBtn:pressed { background-color: #0ea5e9; }
+
+/* Output Text Area */
+#LoremOutput {
+    background-color: #0f172a; 
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    color: #cbd5e1;
+    font-size: 15px;
+    padding: 20px;
+    line-height: 1.6;
+}

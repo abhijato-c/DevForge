@@ -71,7 +71,7 @@ class HomeGrid(QScrollArea):
             image = QLabel()
             image.setObjectName("ToolSelectorIcon")
             image.setScaledContents(True)
-            image.setPixmap(QPixmap(bk.ResourcePath(f"Static/{name} Icon.png")))
+            image.setPixmap(QPixmap(bk.ResourcePath(f"Images/{name} Icon.png")))
             BtnLayout.addWidget(image, alignment=Qt.AlignmentFlag.AlignHCenter)
 
             BtnLayout.addStretch(3)

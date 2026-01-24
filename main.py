@@ -100,19 +100,18 @@ class MainWindow(QMainWindow):
         self.stack.addWidget(self.home)
         
         # Stack tools
-        GoHome = lambda: self.SwitchTool("")
-        self.stack.addWidget(CaseUtil(HomeCallback = GoHome))
-        self.stack.addWidget(PrettifyUtil(HomeCallback = GoHome))
-        self.stack.addWidget(EncryptionUtil(HomeCallback = GoHome))
-        self.stack.addWidget(JWTUtil(HomeCallback = GoHome))
-        self.stack.addWidget(DateTimeUtil(HomeCallback = GoHome))
-        self.stack.addWidget(ColorUtil(HomeCallback = GoHome))
-        self.stack.addWidget(PasswordUtil(HomeCallback = GoHome))
-        self.stack.addWidget(QRUtil(HomeCallback = GoHome))
-        self.stack.addWidget(MarkdownUtil(HomeCallback = GoHome))
-        self.stack.addWidget(DiffUtil(HomeCallback = GoHome))
-        self.stack.addWidget(LoremUtil(HomeCallback = GoHome))
-        self.stack.addWidget(ConverterUtil(HomeCallback = GoHome))
+        self.stack.addWidget(CaseUtil())
+        self.stack.addWidget(PrettifyUtil())
+        self.stack.addWidget(EncryptionUtil())
+        self.stack.addWidget(JWTUtil())
+        self.stack.addWidget(DateTimeUtil())
+        self.stack.addWidget(ColorUtil())
+        self.stack.addWidget(PasswordUtil())
+        self.stack.addWidget(QRUtil())
+        self.stack.addWidget(MarkdownUtil())
+        self.stack.addWidget(DiffUtil())
+        self.stack.addWidget(LoremUtil())
+        self.stack.addWidget(ConverterUtil())
 
     def CreateNavBtn(self, text, icon):
         btn = QPushButton(f"  {text}")
@@ -121,7 +120,7 @@ class MainWindow(QMainWindow):
         btn.setHeight = 45
         
         # Icon
-        btn.setIcon(QIcon(bk.ResourcePath(f"Static/{icon}.png")))
+        btn.setIcon(QIcon(bk.ResourcePath(f"Images/{icon}.png")))
         btn.setIconSize(QSize(20, 20))
             
         return btn
