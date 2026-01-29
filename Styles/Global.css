@@ -3,20 +3,21 @@ QMainWindow, QDialog, QScrollArea, QWidget#HomeContainer {
 }
 
 /* Scrollbar */
-QScrollBar:vertical {
+QScrollBar {
     border: none;
     background-color: #0f172a;
-    width: 10px;
     margin: 0px;
 }
+QScrollBar:vertical {width: 10px;}
+QScrollBar:horizontal {height: 10px;}
 
-QScrollBar::handle:vertical {
+QScrollBar::handle {
     background-color: #334155;
     border-radius: 5px;
 }
 
-QScrollBar::handle:vertical:hover {background-color: #475569;}
-QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {height: 0px;} /* Hide up down arrows */
+QScrollBar::handle:hover {background-color: #475569;}
+QScrollBar::add-line, QScrollBar::sub-line {height: 0px;} /* Hide up down arrows */
 
 /* Header for tool pages */
 #ToolTitle {
