@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("DevForge")
-        self.resize(700, 500)
+        self.resize(600, 650)
 
         # Stylesheet
         self.setStyleSheet(bk.LoadStylesheet('main'))
