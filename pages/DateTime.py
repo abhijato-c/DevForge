@@ -116,8 +116,8 @@ class DateTimeUtil(QWidget):
         self.OutputAnswerLabel.setObjectName("OutputAlabel")
         self.OutputLayout.addWidget(self.OutputAnswerLabel, alignment=Qt.AlignmentFlag.AlignCenter)
 
-        self.MainLayout.addWidget(self.InputArea)
-        self.MainLayout.addWidget(self.OutputArea)
+        self.MainLayout.addWidget(self.InputArea, stretch = 5)
+        self.MainLayout.addWidget(self.OutputArea, stretch = 2)
         self.MainLayout.addStretch()
     
     def SetOperation(self, operation):
@@ -302,15 +302,7 @@ class DateTimeUtil(QWidget):
         width = self.width()
         height = self.height()
 
-        TabHeight = min(int(height * 0.1), 70)
-        TabBtnHeight = int(TabHeight * 0.7)
-        InputHeight = int(height * 0.4)
-        OutputHeight = int(height * 0.2)
-        self.TabContainer.setFixedHeight(TabHeight)
-        self.InputArea.setFixedHeight(InputHeight)
-        self.OutputArea.setFixedHeight(OutputHeight)
-        for tab in self.Tabs.values():
-            tab.setFixedHeight(TabBtnHeight)
+        InputHeight = self.InputArea.height()
 
         ModeBtnSize = int(InputHeight * 0.2)
         InputCardWidth = int(width * 0.4)

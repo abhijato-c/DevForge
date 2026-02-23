@@ -48,7 +48,7 @@ class PasswordUtil(QWidget):
         self.InputLayout.addWidget(self.PasswordBox)
         self.InputLayout.addStretch()
 
-        self.MainLayout.addWidget(self.InputArea)
+        self.MainLayout.addWidget(self.InputArea, stretch = 4)
 
         # Security area
         self.SecurityArea = QFrame()
@@ -82,7 +82,7 @@ class PasswordUtil(QWidget):
         self.TimeLayout.addStretch()
         self.SecurityLayout.addLayout(self.TimeLayout)
 
-        self.MainLayout.addWidget(self.SecurityArea)
+        self.MainLayout.addWidget(self.SecurityArea, stretch = 5)
 
         # Improve Area
         self.ImproveArea = QFrame()
@@ -118,7 +118,7 @@ class PasswordUtil(QWidget):
         self.PassOut.setObjectName("PasswordOut")
         self.ImproveLayout.addWidget(self.PassOut)
 
-        self.MainLayout.addWidget(self.ImproveArea)
+        self.MainLayout.addWidget(self.ImproveArea, stretch = 5)
         
         self.MainLayout.addStretch()
     
@@ -189,15 +189,7 @@ class PasswordUtil(QWidget):
         self.PassOut.setText(improved)
     
     def resizeEvent(self, event):
-        width = self.width()
-        height = self.height()
-
-        InputHeight = int(height * 0.2)
-        SecurityHeight = int(height * 0.25)
-        ImproveHeight = int(height * 0.25)
-        self.InputArea.setFixedHeight(InputHeight)
-        self.SecurityArea.setFixedHeight(SecurityHeight)
-        self.ImproveArea.setFixedHeight(ImproveHeight)
+        InputHeight = self.InputArea.height()
 
         TextBoxHeight = int(InputHeight * 0.27)
         self.PasswordBox.setStyleSheet(f"padding: {int(TextBoxHeight * 0.15)}px;")
