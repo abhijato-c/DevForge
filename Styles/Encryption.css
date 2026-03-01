@@ -1,0 +1,28 @@
+QLabel { color: hsl(0, 0%, 85%); }
+
+/* Input field */
+QLineEdit, QTextEdit {
+    background-color: hsl(220, 30%, 20%);
+    border: 1px solid hsl(220, 30%, 50%);
+    border-radius: 6px;
+    color: white;
+    padding: 4px 8px;
+}
+
+QLineEdit:focus, QTextEdit:focus { border: 1px solid hsl(220, 100%, 60%); }
+
+#CopyBtn, #GenBtn {
+    background-color: hsl(220, 30%, 20%);
+    border-radius: 7px;
+}
+#CopyBtn:hover, #GenBtn:hover { background-color: hsl(220, 30%, 30%); }
+#CopyBtn:pressed, #GenBtn:pressed { background-color: hsl(220, 30%, 25%); }
+
+#MainBtn{
+    padding: 10px;
+    background-color: hsl(220, 70%, 20%);
+    color: white;
+    border-radius: 10px;
+}
+#MainBtn:hover { background-color: hsl(220, 70%, 30%); }
+#MainBtn:pressed { background-color: hsl(220, 70%, 25%); }

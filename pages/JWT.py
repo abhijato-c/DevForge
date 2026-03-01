@@ -3,8 +3,6 @@ import json
 import hmac
 from hashlib import sha256, sha384, sha512
 from base64 import urlsafe_b64decode, urlsafe_b64encode
-from cryptography.hazmat.primitives import serialization
-from cryptography.hazmat.primitives.asymmetric import rsa
 
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap
