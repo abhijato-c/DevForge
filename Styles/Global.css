@@ -43,3 +43,5 @@ QScrollBar::add-line, QScrollBar::sub-line {height: 0px;} /* Hide up down arrows
 }
 #TabBtn:hover { background-color: hsl(217, 33%, 22%); }
 #TabBtn[active="true"] { background-color: hsl(220, 90%, 60%);}
+
+QLabel { color: hsl(0, 0%, 85%); }
