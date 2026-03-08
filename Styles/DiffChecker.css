@@ -1,0 +1,73 @@
+#SubHead {
+    color: hsl(220, 80%, 75%);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#IOcont {
+    background-color: hsl(230, 40%, 14%);
+    border: 1px solid hsl(230, 40%, 25%);
+    border-radius: 12px;
+}
+
+QPushButton {
+    background-color: hsl(220, 90%, 60%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 8px 16px;
+    border: none;
+}
+
+QPushButton:hover { background-color: hsl(220, 90%, 65%); }
+QPushButton:pressed { background-color: hsl(220, 90%, 55%); }
+
+QPushButton:disabled {
+    background-color: hsl(230, 20%, 20%);
+    color: hsl(230, 10%, 50%);
+    border: 1px solid hsl(230, 20%, 30%);
+}
+
+#FilLabel {
+    color: hsl(0, 0%, 70%);
+    font-style: italic;
+    background-color: hsl(230, 50%, 12%);
+    padding: 8px 8px;
+    border-radius: 6px;
+    border: 1px solid hsl(230, 40%, 20%);
+}
+
+#ModeLabel {
+    font-size: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    color: hsl(0, 0%, 85%);
+}
+
+QComboBox {
+    background-color: hsl(230, 50%, 12%);
+    border: 1px solid hsl(230, 40%, 30%);
+    color: hsl(0, 0%, 85%);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+QComboBox:hover {
+    border: 1px solid hsl(220, 90%, 60%);
+}
+
+QComboBox QAbstractItemView {
+    background-color: hsl(230, 50%, 12%);
+}
+
+#PreviewBox {
+    background-color: hsl(230, 50%, 15%);
+    color: hsl(0, 0%, 85%);
+    font-size: 14px;
+    border: 1px solid hsl(230, 40%, 25%);
+    border-radius: 10px;
+    padding: 10px;
+}

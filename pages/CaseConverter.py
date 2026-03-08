@@ -4,7 +4,7 @@ from pygments import lexers, token, util
 import re
 import html
 
-from PyQt6.QtCore import Qt, QSize
+from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QVBoxLayout, QWidget, QPushButton, QLabel, QHBoxLayout, QFileDialog, QComboBox, QTextEdit
 
 class CaseUtil(QWidget):
