@@ -2,8 +2,8 @@ import sys
 import os
 
 tools = [
-    "Case Converter", "Prettifier", "Encryption", "JWTs", "DateTime Converter", "Colors", "Password Generator", 
-    "QR and Barcode", "Markdown", "Diff Checker", "Lorem Ipsum", "Unit Converter"
+    "Case Converter", "Prettifier", "Encryption", "JWTs", "DateTime Converter", "Password Generator", 
+    "Diff Checker", "Lorem Ipsum"
 ]
 
 def ResourcePath(RelPath):

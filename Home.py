@@ -88,7 +88,7 @@ class HomeGrid(QScrollArea):
             self.ButtonWidgets.append(btn)
 
     def resizeEvent(self, event):
-        width = self.viewport().width() - 40
+        width = self.viewport().width() - 80
         height = self.viewport().height()
 
         MaxBtnWidth = 350

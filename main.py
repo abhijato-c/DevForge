@@ -105,13 +105,9 @@ class MainWindow(QMainWindow):
         self.stack.addWidget(EncryptionUtil())
         self.stack.addWidget(JWTUtil())
         self.stack.addWidget(DateTimeUtil())
-        self.stack.addWidget(ColorUtil())
         self.stack.addWidget(PasswordUtil())
-        self.stack.addWidget(QRUtil())
-        self.stack.addWidget(MarkdownUtil())
         self.stack.addWidget(DiffUtil())
         self.stack.addWidget(LoremUtil())
-        self.stack.addWidget(ConverterUtil())
 
     def CreateNavBtn(self, text, icon):
         btn = QPushButton(f"  {text}")
