@@ -122,9 +122,11 @@ class CaseUtil(QWidget):
         replace.discard('self')
 
         try:
+            if file.split('.')[-1] == 'txt': raise Exception('No Txt')
             lexer = lexers.get_lexer_for_filename(file)
-        except util.ClassNotFound:
-            print(f"Error: Invalid programming language")
+        except:
+            self.Output = f"Error: Unsupported programming language {file.split('.')[-1]}. Please input a file format that is a programming language."
+            self.PreviewBox.setText(self.Output)
             return
         
         tokens = lexer.get_tokens(self.File)

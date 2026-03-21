@@ -2,6 +2,8 @@
 
 **DevForge** is a centralized, cross-platform desktop suite designed to streamline the daily workflow of developers. Built with Python and PyQt6, it eliminates the need for dozens of open browser tabs by providing essential conversion, formatting, and generation tools in a single interface.
 
+NOTE: Only certain programming languages supported in case converter and prettifier.
+
 ---
 
 ## Features

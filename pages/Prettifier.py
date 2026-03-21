@@ -112,7 +112,7 @@ class PrettifyUtil(QWidget):
             self.Output = dom.toprettyxml(indent="    ")
 
         else:
-            self.Output = "Unsupported file format"
+            self.Output = f"Unsupported programming language {ext}. Please use a valid programming language, or your language is not currently suppoted."
 
         if self.Output: self.DownloadBtn.setEnabled(True)
         self.PreviewBox.setText(self.Output)
